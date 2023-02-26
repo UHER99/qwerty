@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="id" width="500" height="500" style="border: 2px solid red" tabindex="0"></canvas>
+
+    <script>
+        var canvas  = document.getElementById("id");
+        canvas .addEventListener('keydown',dokeydown);
+        canvas1 = canvas .getContext("2d");
+////////////////////////////////////
+        
+
+//////////////////////////////
+
+        canvas1.fillRect(100,100,30,30);
+        var x=100;
+        var y=100;
+        var c=false;
+
+        function dokeydown(e){
+
+            //====================
+			//	THE W KEY
+			//====================
+			if (e.keyCode == 87) {//
+				clearCanvas();
+				y = y - 10;
+				canvas1.fillRect(x, y, 30, 30);
+                canvas2.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE S KEY
+			//====================
+			if (e.keyCode == 83) {
+				clearCanvas();
+				y = y + 10;
+				canvas1.fillRect(x, y, 30, 30);
+                canvas2.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE A KEY
+			//====================
+			if (e.keyCode == 65) {//
+				clearCanvas();
+				x = x - 10;
+				canvas1.fillRect(x, y,30, 30);
+                canvas2.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE D KEY
+			//====================
+			if (e.keyCode == 68) {//
+				clearCanvas();
+				x = x + 10;
+				canvas1.fillRect(x, y, 30, 30);
+                canvas2.fillRect(x, y, 30, 30);
+				
+			}
+
+        }
+
+        function clearCanvas(){
+            canvas.width = canvas.width;
+        }
+      /*  function clearCanvas1(){
+            canvas.width = canvas.width;
+        }*/
+///////////////////////////////
+       
+        canvas2=canvas.getContext("2d")
+        canvas2.fillRect(200,200,30,30);
+        var y=200;
+        var x=200;
+     
+
+        function dokeydown1(e){
+
+            //====================
+			//	THE W KEY
+			//====================
+			if (e.keyCode == 38) {
+				clearCanvas1();
+				y = y - 10;
+				canvas2.fillRect(x, y, 30, 30);
+                canvas1.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE S KEY
+			//====================
+			if (e.keyCode == 40) {
+				clearCanvas1();
+				y = y + 10;
+				canvas2.fillRect(x, y, 30, 30);
+                canvas1.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE A KEY
+			//====================
+			if (e.keyCode == 37) {
+				clearCanvas1();
+				x = x - 10;
+				canvas2.fillRect(x, y,30, 30);
+                canvas1.fillRect(x, y, 30, 30);
+				
+			}
+
+			//====================
+			//	THE D KEY
+			//====================
+			if (e.keyCode == 39) {
+				clearCanvas1();
+				x = x + 10;
+				canvas2.fillRect(x, y, 30, 30);
+                canvas1.fillRect(x, y, 30, 30);
+				
+			}
+
+        }
+    </script>
+    
+</body>
+</html>
